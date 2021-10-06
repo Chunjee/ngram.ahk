@@ -33,7 +33,7 @@ generates ngrams.
 
 ##### Arguments
 1. value (String|Array): The value to generate ngrams from
-2. expected (Number|Array): Optional (default `1`); the length of the ngrams to generate
+2. size (Number|Array): Optional (default `1`); the length of the ngrams to generate
 
 ##### Returns
 (Array): returns all n-grams in an array

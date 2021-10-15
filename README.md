@@ -1,7 +1,7 @@
-# ngram.ahk
-A really small ngram generator for AutoHotkey.
+# [![ngram.ahk](https://raw.githubusercontent.com/Chunjee/ngram.ahk/master/header.svg)](https://www.github.com/chunjee/ngram.ahk)
+A really simple ngram generator for AutoHotkey.
 
-[![npm](https://img.shields.io/npm/dm/ngram.ahk?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/ngram.ahk)
+[![npm](https://img.shields.io/npm/dm/ngram.ahk?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/ngram.ahk) ![license](https://img.shields.io/npm/l/ngram.ahk?color=tan&style=for-the-badge) [![source-code](https://img.shields.io/badge/source-code-red?style=for-the-badge&logo=github)](https://www.github.com/chunjee/ngram.ahk)
 
 
 ## Installation

@@ -15,7 +15,7 @@ In your code only export.ahk needs to be included:
 
 ```autohotkey
 #Include %A_ScriptDir%\node_modules
-#Include ngram.ahk\export.ahk
+#Include ngram.ahk\ngram.ahk
 
 ngram := new ngram()
 
@@ -26,16 +26,21 @@ ngram.generate(["hello", "world", "foo", "bar"], 2)
 
 ## API
 
-### .generate(value, length)
+### .generate
 
-generates ngrams.
+> `.generate(value, length, separator)`
 
-##### Arguments
-1. value (String|Array): The value to generate ngrams from
-2. size (Number|Array): Optional (default `1`); the length of the ngrams to generate
+Generates n-grams from an array of elements or a string.
 
-##### Returns
-(Array): returns all n-grams in an array
+| Argument        | Type                | Default Value | Description                                                                 |
+|-----------------|---------------------|---------------|-----------------------------------------------------------------------------|
+| `paramArray`    | `Array` \| `string` | N/A           | The input to generate n-grams from. If a string is provided, it will be split using `paramSeparator`. |
+| `paramSize`     | `number`            | `1`           | The size(s) of the n-grams to generate. |
+| `paramSeparator`| `string`            | `""`          | The delimiter to use when splitting a string into an array (ignored if `paramArray` is already an array). |
+
+#### Returns:  
+An array of n-grams, where each n-gram is an array of consecutive elements from the input.
+
 
 ##### Example
 ```autohotkey

@@ -1,15 +1,14 @@
 {
 	"name": "ngram.ahk",
-	"version": "0.1.1",
+	"version": "1.0.0",
 	"description": "",
-	"main": "export.ahk",
+	"main": "ngram.ahk",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Chunjee/ngram.ahk.git"
 	},
-	"dependencies": { },
 	"devdependencies": {
-		"expect.ahk": "^0.1.0"
+		"expect.ahk": "^0.1.1"
 	},
 	"author": "Shawn Brooker",
 	"license": "MIT",

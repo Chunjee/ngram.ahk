@@ -1,7 +1,9 @@
 SetBatchLines, -1
+#Requires autohotkey v1.1
 #SingleInstance, force
 #NoTrayIcon
-#Include %A_ScriptDir%\..\export.ahk
+
+#Include %A_ScriptDir%\..\ngram.ahk
 #Include %A_ScriptDir%\..\node_modules
 #Include expect.ahk\export.ahk
 
@@ -15,6 +17,9 @@ expect.test(ngram.generate(["hello", "world", "foo", "bar"], 2), [["hello", "wor
 expect.label("string input")
 expect.test(ngram.generate("mississipi"), [["m"], ["i"], ["s"], ["s"], ["i"], ["s"], ["s"], ["i"], ["p"], ["i"]])
 expect.test(ngram.generate("mississipi", 2), [["m", "i"], ["i", "s"], ["s", "s"], ["s", "i"], ["i", "s"], ["s", "s"], ["s", "i"], ["i", "p"], ["p", "i"]])
+expect.label("string input with custom separator")
+expect.test(ngram.generate("world,peace", 2, ","), [["world", "peace"]])
+expect.test(ngram.generate("world,peace", 1, ","), [["world"], ["peace"]])
 
 expect.label("multiple groups")
 expect.test(ngram.generate(["mary", "had", "a", "little", "lamb"], [1, 4]), [[["mary"], ["had"], ["a"], ["little"], ["lamb"]], [["mary", "had", "a", "little"], ["had", "a", "little", "lamb"]]])

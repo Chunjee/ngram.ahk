@@ -34,8 +34,8 @@ Generates n-grams from an array of elements or a string.
 
 | Argument        | Type                | Default Value | Description                                                                 |
 |-----------------|---------------------|---------------|-----------------------------------------------------------------------------|
-| `paramArray`    | `Array` \| `string` | N/A           | The input to generate n-grams from. If a string is provided, it will be split using `paramSeparator`. |
-| `paramSize`     | `number`            | `1`           | The size(s) of the n-grams to generate. |
+| `paramArray`    | `array` \| `string` | N/A           | The input to generate n-grams from. If a string is provided, it will be split using `paramSeparator`. |
+| `paramSize`     | `number` \| `array` | `1`           | The size(s) of the n-grams to generate. If an array is provided, n-grams of each size are generated. |
 | `paramSeparator`| `string`            | `""`          | The delimiter to use when splitting a string into an array (ignored if `paramArray` is already an array). |
 
 #### Returns:  
@@ -52,5 +52,5 @@ ngram.generate("string", 2)
 
 array := strSplit("Time is an illusion. Lunchtime doubly so", " ")
 ngram.generate(array, [1, 3])
-; => [["Time"], ["is"], ["an"], ["illusion."], ["Lunchtime"], ["doubly"], ["so"]], [["Time", "is", "an"], ["is", "an", "illusion."], ["an", "illusion.", "Lunchtime"], ["illusion.", "Lunchtime", "doubly"], ["Lunchtime", "doubly", "so"]]
+; => [[["Time"], ["is"], ["an"], ["illusion."], ["Lunchtime"], ["doubly"], ["so"]], [["Time", "is", "an"], ["is", "an", "illusion."], ["an", "illusion.", "Lunchtime"], ["illusion.", "Lunchtime", "doubly"], ["Lunchtime", "doubly", "so"]]])
 ```

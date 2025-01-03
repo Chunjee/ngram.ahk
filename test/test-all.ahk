@@ -24,6 +24,11 @@ expect.test(ngram.generate("world,peace", 1, ","), [["world"], ["peace"]])
 expect.label("multiple groups")
 expect.test(ngram.generate(["mary", "had", "a", "little", "lamb"], [1, 4]), [[["mary"], ["had"], ["a"], ["little"], ["lamb"]], [["mary", "had", "a", "little"], ["had", "a", "little", "lamb"]]])
 
+expect.label("multiple groups 2")
+inputArr := strSplit("Time is an illusion. Lunchtime doubly so", " ")
+array := ngram.generate(inputArr, [1, 3])
+expect.test(array, [[["Time"], ["is"], ["an"], ["illusion."], ["Lunchtime"], ["doubly"], ["so"]], [["Time", "is", "an"], ["is", "an", "illusion."], ["an", "illusion.", "Lunchtime"], ["illusion.", "Lunchtime", "doubly"], ["Lunchtime", "doubly", "so"]]])
+
 ; wrap up
 expect.final()
 expect.fullReport()
